@@ -80,10 +80,15 @@ WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'Eb-6F1a3AeE1gD63d5f-be4g-f264fa5',
+        'HOST': 'roundhouse.proxy.rlwy.net',
+        'PORT': '23134',
     }
 }
+
 
 
 # Password validation
