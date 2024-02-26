@@ -14,3 +14,13 @@ def index(request):
     </html>
     '''
     return HttpResponse(html)
+
+
+from django.shortcuts import render
+from django.conf import settings
+
+def home_view(request):
+    context = {}
+    context['title'] = 'Home Page'
+    context['image'] = request.build_absolute_uri(settings.STATIC_URL + 'example/1.png')
+    return render(request, 'example/index.html', context=context)
